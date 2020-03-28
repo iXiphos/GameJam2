@@ -12,11 +12,9 @@ public class Movement : MonoBehaviour
     public float accelerationSpeed;
     public float decelerationSpeed;
     public float runSpeed;
-    public float accelerationRun;
 
     private float curSpeed;
-
-    public float rotationSpeed;
+    private float tempSpeed;
 
     public float jumpForce;
 
@@ -31,7 +29,9 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        curSpeed = maxSpeed;
+        curSpeed = 0;
+
+        tempSpeed = maxSpeed;
 
         jump = true;
     }
@@ -39,13 +39,28 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Sprint();
+       
         zAxis = Input.GetAxisRaw("Vertical");
         xAxis = Input.GetAxisRaw("Horizontal");
-        //if(Input.GetAxis("Vertical") != 0 && (speed < maxSpeed))
-        //{
-        //    speed += (Input.GetAxisRaw("Vertical") * accelerationSpeed) * Time.deltaTime;
-        //}
+
+        Debug.Log(curSpeed);
+        Debug.Log(zAxis);
+
+        if (xAxis != 0 && (curSpeed <= maxSpeed))
+        {
+            curSpeed += accelerationSpeed;
+        }
+        else if (zAxis != 0 && (curSpeed <= maxSpeed))
+        {
+            curSpeed += accelerationSpeed;
+        }
+        Sprint();
+
+        if (xAxis == 0 && zAxis == 0 && (curSpeed > 0 ))
+        {
+            curSpeed -= decelerationSpeed;
+        }
+
         moveDirection = (xAxis * transform.right + zAxis * transform.forward).normalized;
         Jump();
     }
@@ -64,9 +79,9 @@ public class Movement : MonoBehaviour
     private void Sprint()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
-            curSpeed = runSpeed;
+            maxSpeed = runSpeed;
         else if (Input.GetKeyUp(KeyCode.LeftShift))
-            curSpeed = maxSpeed;
+            maxSpeed = tempSpeed;
     }
 
     private void Jump()
