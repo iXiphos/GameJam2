@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror", "Mirror.csproj", "{A8FEEB86-3F4D-0617-DA22-37B94D334652}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Components", "Mirror.Components.csproj", "{6984CD22-96CA-A71F-BE29-2E2244A84F90}"
@@ -10,8 +12,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Examples", "Mirror.Examples.csproj", "{3E565CF6-352E-A6CA-383C-EE9F16C5A054}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Authenticators", "Mirror.Authenticators.csproj", "{8D2DDD32-156F-2E3D-ADC4-6849BE24371A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Weaver", "Mirror.Weaver.csproj", "{74319B9F-7B40-0FEB-48E8-0A89553D0F4E}"
 EndProject
@@ -25,6 +25,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A8FEEB86-3F4D-0617-DA22-37B94D334652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8FEEB86-3F4D-0617-DA22-37B94D334652}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8FEEB86-3F4D-0617-DA22-37B94D334652}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,10 +49,6 @@ Global
 		{8D2DDD32-156F-2E3D-ADC4-6849BE24371A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D2DDD32-156F-2E3D-ADC4-6849BE24371A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D2DDD32-156F-2E3D-ADC4-6849BE24371A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{74319B9F-7B40-0FEB-48E8-0A89553D0F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74319B9F-7B40-0FEB-48E8-0A89553D0F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74319B9F-7B40-0FEB-48E8-0A89553D0F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
